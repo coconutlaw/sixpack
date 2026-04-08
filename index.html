@@ -12,9 +12,9 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
-  --bg:#0a0a0c;--sf:#131318;--sf2:#1a1a22;--sf3:#22222e;
-  --tx:#e8e6e3;--tx2:#9a9898;--tx3:#5e5e5e;
-  --acc:#c8f547;--red:#ff5c5c;--blue:#5cacff;--teal:#4dd9ac;--amber:#f5a623;--purple:#b28dff;
+  --bg:#ffffff;--sf:#f5f5f7;--sf2:#ebebed;--sf3:#d1d1d6;
+  --tx:#1d1d1f;--tx2:#6e6e73;--tx3:#aeaeb2;
+  --acc:#34c759;--red:#ff3b30;--blue:#007aff;--teal:#30b0c7;--amber:#ff9500;--purple:#af52de;
   --r:12px;--rs:8px;
 }
 html,body{background:var(--bg);color:var(--tx);font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -22,17 +22,17 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 input[type=number]{-moz-appearance:textfield}
 input[type=date]{-webkit-appearance:none}
 
-.tab-bar{position:sticky;top:0;z-index:100;background:rgba(10,10,12,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--sf3);display:flex;justify-content:center}
+.tab-bar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--sf3);display:flex;justify-content:center}
 .tab-btn{padding:14px 28px;background:none;border:none;color:var(--tx3);font-size:14px;font-weight:400;cursor:pointer;display:flex;align-items:center;gap:6px;border-bottom:2px solid transparent;transition:all .2s;font-family:inherit}
 .tab-btn.active{color:var(--acc);font-weight:600;border-bottom-color:var(--acc)}
 
 .wrap{max-width:800px;margin:0 auto;padding:0 16px}
-.card{background:var(--sf);border-radius:var(--r);padding:16px;border:1px solid rgba(255,255,255,.04)}
+.card{background:var(--sf);border-radius:var(--r);padding:16px;border:1px solid rgba(0,0,0,.04)}
 .label{font-size:10px;font-family:'SF Mono',SFMono-Regular,Consolas,monospace;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
 .tag{display:inline-block;padding:2px 7px;border-radius:10px;font-size:9px;font-weight:600;margin-right:3px}
 .mono{font-family:'SF Mono',SFMono-Regular,Consolas,monospace}
 
-.hero-badge{font-size:10px;letter-spacing:3px;color:var(--acc);display:inline-block;padding:3px 14px;border:1px solid rgba(200,245,71,.2);border-radius:16px;margin-bottom:10px}
+.hero-badge{font-size:10px;letter-spacing:3px;color:var(--acc);display:inline-block;padding:3px 14px;border:1px solid rgba(52,199,89,.3);border-radius:16px;margin-bottom:10px}
 .hero-title{font-size:32px;font-weight:700;letter-spacing:-1.5px}
 .hero-sub{color:var(--tx2);font-size:13px;margin-top:4px}
 
@@ -49,14 +49,14 @@ input[type=date]{-webkit-appearance:none}
 .chart-canvas{width:100%;height:100%}
 
 .system-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0}
-.system-card{background:var(--sf);border-radius:var(--r);padding:14px;border:1px solid rgba(255,255,255,.04);display:flex;flex-direction:column}
+.system-card{background:var(--sf);border-radius:var(--r);padding:14px;border:1px solid rgba(0,0,0,.04);display:flex;flex-direction:column}
 .system-icon{font-size:20px;margin-bottom:8px}
 .system-title{font-size:14px;font-weight:600;margin-bottom:4px}
 .system-desc{font-size:11px;color:var(--tx2);line-height:1.5}
 
 .timeline-line{position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--sf2)}
 .timeline-dot{position:absolute;left:-17px;top:16px;width:10px;height:10px;border-radius:50%;border:2px solid var(--sf)}
-.meal-card{position:relative;margin-bottom:14px;background:var(--sf);border-radius:var(--r);padding:12px 14px;border:1px solid rgba(255,255,255,.03)}
+.meal-card{position:relative;margin-bottom:14px;background:var(--sf);border-radius:var(--r);padding:12px 14px;border:1px solid rgba(0,0,0,.03)}
 
 .rule-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .rule-card{background:var(--sf);border-radius:var(--r);padding:12px 14px;border-left:3px solid}
@@ -67,19 +67,19 @@ input[type=date]{-webkit-appearance:none}
 .schedule-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:12px}
 .schedule-table th,.schedule-table td{padding:8px;text-align:left;border-bottom:1px solid var(--sf3)}
 .schedule-table th{background:var(--sf2);color:var(--tx3);font-weight:600;font-size:10px;text-transform:uppercase}
-.schedule-table tr:hover{background:rgba(255,255,255,.01)}
+.schedule-table tr:hover{background:rgba(0,0,0,.01)}
 .schedule-day{font-weight:600;min-width:50px}
 .schedule-training{color:var(--acc);font-weight:500}
 .schedule-activity{color:var(--tx2);font-size:11px}
 
 .ib-table-head,.ib-table-row{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1fr 30px;gap:6px;padding:6px 0}
 .ib-table-head{border-bottom:1px solid var(--sf3);font-size:10px;color:var(--tx3)}
-.ib-table-row{border-bottom:1px solid rgba(255,255,255,.03);align-items:center;font-size:12px}
+.ib-table-row{border-bottom:1px solid rgba(0,0,0,.03);align-items:center;font-size:12px}
 .ib-actual{border-left:3px solid var(--acc);padding-left:8px}
 
 .proj-head,.proj-row{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1fr 1fr;gap:4px;font-size:11px}
 .proj-head{padding:6px 0;border-bottom:1px solid var(--sf3);font-size:9px;color:var(--tx3)}
-.proj-row{padding:5px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.proj-row{padding:5px 0;border-bottom:1px solid rgba(0,0,0,.03)}
 .proj-actual{border-left:3px solid var(--acc);padding-left:6px;font-weight:600}
 
 .day-sel{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
@@ -89,18 +89,18 @@ input[type=date]{-webkit-appearance:none}
 .prog-bar-outer{flex:1;height:6px;background:var(--sf3);border-radius:3px;overflow:hidden}
 .prog-bar-inner{height:100%;background:var(--acc);border-radius:3px;transition:width .4s}
 
-.ex-card{background:var(--sf);border-radius:var(--r);margin-bottom:8px;border:1px solid rgba(255,255,255,.04);overflow:hidden;transition:border-color .2s}
+.ex-card{background:var(--sf);border-radius:var(--r);margin-bottom:8px;border:1px solid rgba(0,0,0,.04);overflow:hidden;transition:border-color .2s}
 .ex-card.done{border-color:rgba(200,245,71,.15)}
 .ex-header{display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer}
 .ex-check{width:20px;height:20px;border-radius:5px;border:2px solid var(--sf3);background:transparent;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
-.ex-check.checked{border-color:var(--acc);background:var(--acc)}
+.ex-check.checked{border-color:var(--acc);background:var(--acc);color:#fff}
 .ex-name{font-size:14px;font-weight:500}
 .ex-name.done{color:var(--tx2);text-decoration:line-through;text-decoration-color:var(--tx3)}
 
 .set-row{display:flex;align-items:center;gap:8px;margin-bottom:5px;font-size:12px}
 .set-input{background:var(--sf2);border:1px solid var(--sf3);border-radius:5px;padding:5px 8px;color:var(--tx);font-family:'SF Mono',monospace;font-size:12px;width:60px;text-align:center;outline:none}
 .set-check{width:20px;height:20px;border-radius:4px;border:1.5px solid var(--sf3);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:all .15s}
-.set-check.checked{border-color:var(--acc);background:var(--acc)}
+.set-check.checked{border-color:var(--acc);background:var(--acc);color:#fff}
 
 .btn-primary{background:var(--acc);color:var(--bg);border:none;border-radius:16px;padding:8px 24px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
 .btn-secondary{padding:9px 20px;border-radius:16px;font-size:12px;font-weight:500;background:var(--sf2);color:var(--tx2);border:1px solid var(--sf3);cursor:pointer;font-family:inherit}
@@ -109,10 +109,10 @@ input[type=date]{-webkit-appearance:none}
 .ib-form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 .ib-input{width:100%;background:var(--sf2);border:1px solid var(--sf3);border-radius:6px;padding:8px 10px;color:var(--tx);font-size:13px;font-family:'SF Mono',monospace;outline:none}
 
-.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--acc);color:var(--bg);padding:10px 24px;border-radius:20px;font-size:13px;font-weight:600;z-index:200;opacity:0;transition:all .3s;pointer-events:none}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--acc);color:#fff;padding:10px 24px;border-radius:20px;font-size:13px;font-weight:600;z-index:200;opacity:0;transition:all .3s;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 
-.hist-item{background:var(--sf);border-radius:var(--rs);padding:10px 14px;display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.03);margin-bottom:6px}
+.hist-item{background:var(--sf);border-radius:var(--rs);padding:10px 14px;display:flex;align-items:center;gap:10px;border:1px solid rgba(0,0,0,.03);margin-bottom:6px}
 .hist-bar{width:50px;height:4px;background:var(--sf3);border-radius:2px;overflow:hidden}
 .hist-fill{height:100%;background:var(--acc);border-radius:2px}
 
@@ -240,10 +240,27 @@ input[type=date]{-webkit-appearance:none}
       </div>
       <div style="display:flex;gap:10px;font-size:10px;color:var(--tx3)">
         <span><b style="color:var(--red)">P 170g</b></span>
-        <span><b style="color:var(--acc)">C 200g</b></span>
-        <span><b style="color:var(--amber)">F 65g</b></span>
+        <span><b style="color:var(--acc)">C 175g</b></span>
+        <span><b style="color:var(--amber)">F 46g</b></span>
       </div>
     </div>
+<!-- PROTEIN GUIDE -->
+<div style="margin-top:28px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+    <span style="font-size:18px;font-weight:600">Protein guide — 50g per meal</span>
+  </div>
+  <div style="font-size:12px;color:var(--tx2);margin-bottom:6px;line-height:1.6">
+    <strong style="color:var(--red)">Why 50g?</strong> Each meal needs ~2.5-3g leucine to trigger mTOR (muscle building signal). 50g protein = enough leucine. Miss it = wasted meal for muscle growth.<br>
+    <strong style="color:var(--acc)">Rest days too?</strong> YES. Muscle repairs 24-48h after training. Rest day protein builds what you broke in the gym.
+  </div>
+  <div style="font-size:13px;font-weight:600;margin:14px 0 8px;color:var(--tx)">🍗 What 50g protein looks like</div>
+  <div style="font-size:11px;color:var(--tx2);margin-bottom:10px">1 palm = ~30-35g protein. You need <strong>1.5 palms</strong> of meat per meal.</div>
+  <div id="protein-guide"></div>
+  
+  <div style="font-size:13px;font-weight:600;margin:18px 0 8px;color:var(--tx)">➕ Protein boosters (add to any meal)</div>
+  <div id="protein-boosters"></div>
+</div>
+
     <div id="meals-container" style="position:relative;padding-left:20px">
       <div class="timeline-line"></div>
     </div>
@@ -292,7 +309,7 @@ input[type=date]{-webkit-appearance:none}
             <td class="schedule-training">—</td>
             <td class="schedule-activity">Swim intervals 30min / Tennis</td>
           </tr>
-          <tr style="background:rgba(255,255,255,.02)">
+          <tr style="background:rgba(0,0,0,.06)">
             <td class="schedule-day">Sun</td>
             <td class="schedule-training">—</td>
             <td class="schedule-activity">Full rest</td>
@@ -308,7 +325,7 @@ input[type=date]{-webkit-appearance:none}
     <div class="rule-grid">
       <div class="rule-card" style="border-left-color:var(--red)">
         <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;margin-bottom:3px">⚠ Protein ≥ 170g</div>
-        <div style="font-size:11px;color:var(--tx2)">Miss carbs? Fine. Miss protein? Muscle pays.</div>
+        <div style="font-size:11px;color:var(--tx2)">2 scoops whey = 48g. Every day. Rest days included.</div>
       </div>
       <div class="rule-card" style="border-left-color:var(--teal)">
         <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;margin-bottom:3px">💧 Water ≥ 2.5L</div>
@@ -320,7 +337,7 @@ input[type=date]{-webkit-appearance:none}
       </div>
       <div class="rule-card" style="border-left-color:var(--blue)">
         <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;margin-bottom:3px">🌙 Sleep ≥ 7 hours</div>
-        <div style="font-size:11px;color:var(--tx2)">Cortisol = belly fat. Sleep &lt; 7h = muscle loss.</div>
+        <div style="font-size:11px;color:var(--tx2)">Sleep < 7h = 80% of weight loss is muscle.</div>
       </div>
     </div>
   </div>
@@ -468,13 +485,12 @@ const WORKOUTS={
 const DAYS=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
 
 const MEALS=[
-  {time:'7:00-9:00 AM',title:'Black coffee / water',kcal:null,tags:[],desc:'Work block. Fasting.',color:'#555'},
-  {time:'9:00 AM',title:'Pre-workout shake',kcal:350,tags:[{l:'P 35g',c:'#ff5c5c'},{l:'C 45g',c:'#c8f547'},{l:'F 5g',c:'#f5a623'}],desc:'1 scoop whey + 200ml milk + banana + 5g creatine',color:'#c8f547'},
-  {time:'10:30 AM',title:'Gym — 60-75 min',kcal:null,tags:[],desc:'Chest/Back/Legs rotation',color:'#b28dff'},
-  {time:'12:30 PM',title:'Lunch (biggest meal)',kcal:700,tags:[{l:'P 55g',c:'#ff5c5c'},{l:'C 70g',c:'#c8f547'},{l:'F 18g',c:'#f5a623'}],desc:'200g protein (chicken/fish/beef) + rice + unlimited greens',color:'#c8f547'},
-  {time:'4:30 PM',title:'Snack',kcal:350,tags:[{l:'P 32g',c:'#ff5c5c'},{l:'C 25g',c:'#c8f547'},{l:'F 18g',c:'#f5a623'}],desc:'Greek yogurt + almonds | 3 eggs + bread | Protein bar | Tuna + cucumber',color:'#f5a623'},
-  {time:'7:30 PM',title:'Dinner',kcal:700,tags:[{l:'P 48g',c:'#ff5c5c'},{l:'C 55g',c:'#c8f547'},{l:'F 22g',c:'#f5a623'}],desc:'200g protein + rice or sweet potato + greens + healthy fat',color:'#4dd9ac'},
-  {time:'9:30 PM',title:'Casein shake (optional)',kcal:100,tags:[{l:'P 20g',c:'#ff5c5c'}],desc:'Casein protein before bed for overnight muscle repair',color:'#5cacff'},
+  {time:'7:00–12:00 PM',title:'Fasting + Coffee',kcal:null,tags:[],desc:'2 cups black coffee. Deep work block. Stay hydrated.',color:'var(--tx3)'},
+  {time:'12:00–1:30 PM',title:'Lunch (1st meal)',kcal:700,tags:[{l:'P 50g',c:'var(--red)'},{l:'C 75g',c:'var(--acc)'},{l:'F 18g',c:'var(--amber)'}],desc:'1.5 palm-size protein (chicken/beef/pork/fish) + rice + greens',color:'var(--acc)'},
+  {time:'3:00–4:00 PM',title:'Pre-gym snack',kcal:200,tags:[{l:'P 8g',c:'var(--red)'},{l:'C 25g',c:'var(--acc)'},{l:'F 8g',c:'var(--amber)'}],desc:'Banana + almonds | Nuts + yogurt | Protein bar',color:'var(--amber)'},
+  {time:'5:00 PM',title:'Gym — 60-75 min',kcal:null,tags:[],desc:'Chest/Back/Legs rotation with friend',color:'var(--purple)'},
+  {time:'Post-gym',title:'Protein shake',kcal:250,tags:[{l:'P 48g',c:'var(--red)'}],desc:'2 scoops whey + 5g creatine. EVERY DAY, not optional.',color:'var(--blue)'},
+  {time:'7:30–8:00 PM',title:'Dinner (2nd meal)',kcal:700,tags:[{l:'P 50g',c:'var(--red)'},{l:'C 75g',c:'var(--acc)'},{l:'F 20g',c:'var(--amber)'}],desc:'1.5 palm-size protein + rice/sweet potato + greens',color:'var(--acc)'},
 ];
 
 const SAFE_FOOD=[
@@ -532,6 +548,56 @@ function getLatest(){
 }
 
 // ============ RENDER STATS ============
+
+const PROTEIN_MEALS=[
+  {place:'Chicken rice 鸡饭',order:'Steamed chicken breast (大份去皮) + half rice + egg',p:'50g',k:'~550',color:'var(--acc)'},
+  {place:'Economy rice 经济饭',order:'Chicken leg + steamed egg + tofu + less rice',p:'48-55g',k:'~600',color:'var(--acc)'},
+  {place:'Korean BBQ 韩国烤肉',order:'200g beef/pork belly + lettuce wraps + edamame',p:'45-50g',k:'~650',color:'var(--red)'},
+  {place:'Mamak 嘛嘛档',order:'Tandoori chicken 2pc + naan (skip mee goreng)',p:'40-45g',k:'~600',color:'var(--amber)'},
+  {place:'Arabic 阿拉伯餐',order:'Shawarma plate / Mixed grill + hummus',p:'45-55g',k:'~650',color:'var(--purple)'},
+  {place:'Thunder tea 擂茶',order:'Add chicken + extra egg (needs boost!)',p:'25-30g',k:'~450',color:'var(--teal)'},
+  {place:'Mala tang 麻辣烫',order:'Beef slices + chicken + tofu + egg + greens',p:'50-60g',k:'~500',color:'var(--red)'},
+  {place:'Home cook 自煮',order:'170g chicken breast + egg + rice + veggies',p:'50g',k:'~550',color:'var(--acc)'},
+];
+
+const PROTEIN_BOOSTERS=[
+  {n:'Egg 鸡蛋',p:'+6g',note:'Cheapest protein. Add anywhere.'},
+  {n:'Tofu 豆腐 (150g)',p:'+12g',note:'经济饭必点'},
+  {n:'Greek yogurt (200g)',p:'+20g',note:'Boss favourite. With blueberries.'},
+  {n:'Natto 纳豆 (50g)',p:'+9g',note:'Good fats too'},
+  {n:'Milk 牛奶 (250ml)',p:'+8g',note:'Add to coffee = latte gains'},
+  {n:'Edamame 毛豆 (100g)',p:'+11g',note:'Korean BBQ side dish'},
+  {n:'Tuna can 金枪鱼 (1 can)',p:'+25g',note:'Keep at home. Emergency protein.'},
+  {n:'Almonds 杏仁 (30g)',p:'+6g',note:'Afternoon snack'},
+  {n:'Whey 1 scoop',p:'+24g',note:'Insurance policy'},
+];
+
+function renderProteinGuide(){
+  document.getElementById('protein-guide').innerHTML=PROTEIN_MEALS.map(m=>`
+    <div style="background:var(--sf);border-radius:var(--rs);padding:10px 12px;margin-bottom:6px;border-left:3px solid ${m.color};display:flex;justify-content:space-between;align-items:center">
+      <div style="flex:1">
+        <div style="font-size:13px;font-weight:600">${m.place}</div>
+        <div style="font-size:11px;color:var(--tx2)">${m.order}</div>
+      </div>
+      <div style="text-align:right;min-width:70px">
+        <div style="font-size:14px;font-weight:700;color:var(--red)">${m.p}</div>
+        <div style="font-size:10px;color:var(--tx3)">${m.k} kcal</div>
+      </div>
+    </div>
+  `).join('');
+  
+  document.getElementById('protein-boosters').innerHTML='<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;font-size:11px">'+PROTEIN_BOOSTERS.map(b=>`
+    <div style="background:var(--sf);border-radius:var(--rs);padding:8px 10px">
+      <div style="font-size:12px;font-weight:600">${b.n}</div>
+      <div style="font-size:14px;font-weight:700;color:var(--acc)">${b.p}</div>
+      <div style="font-size:9px;color:var(--tx3)">${b.note}</div>
+    </div>
+  `).join('')+'</div>';
+}
+
+
+
+
 function renderStats(){
   const l=getLatest();
   const cards=[
@@ -574,16 +640,16 @@ function renderChart(){
   const mapX=i=>pad.l+i/(PROJ.length-1)*cW;
 
   // Grid lines
-  ctx.strokeStyle='rgba(255,255,255,.05)';ctx.lineWidth=1;
+  ctx.strokeStyle='rgba(0,0,0,.08)';ctx.lineWidth=1;
   for(let v=10;v<=80;v+=10){
     const y=mapY(v);
     ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(W-pad.r,y);ctx.stroke();
-    ctx.fillStyle='#5e5e5e';ctx.font='8px monospace';ctx.textAlign='right';
+    ctx.fillStyle='#aeaeb2';ctx.font='8px monospace';ctx.textAlign='right';
     ctx.fillText(v,pad.l-4,y+3);
   }
 
   // X labels
-  ctx.textAlign='center';ctx.fillStyle='#5e5e5e';ctx.font='8px monospace';
+  ctx.textAlign='center';ctx.fillStyle='#aeaeb2';ctx.font='8px monospace';
   PROJ.forEach((d,i)=>{if(i%3===0){ctx.fillText(d.date,mapX(i),H-5)}});
 
   // Lines
@@ -872,6 +938,7 @@ function init(){
   loadState();
   renderStats();
   renderMeals();
+  renderProteinGuide();
   renderFood();
   renderIBLogs();
   renderProjTable();
